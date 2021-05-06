@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HRM Emulator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,400italic,500italic" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,500italic,400italic" />
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./emulator.css" />
+  </head>
+  <body>
+    <header>
+      <h1>        
+        HRM
+      </h1>
+      <h2>Emulator</h2>
+      <h3 id="levelName"></h3>
+    </header>
+    <menu>
+      <label>Setup: <select id="level"></select></label>
+      <button id="editSetup" hidden>Edit</button>
+      <button id="saveSetup" hidden>Save</button>
+      <button id="cancelSetup" hidden>Cancel</button>
+    </menu>
+    <main>
+      <section id="editInbox">
+        <h1><i class="fa fa-hand-o-up" title="In"></i></h1>
+        <textarea></textarea>      
+      </section>
+      <section id="editFloor">
+        <h1>Floor</h1>
+        <textarea></textarea>      
+      </section>
+      <section id="inbox">
+        <h1><i class="fa fa-hand-o-up" title="In"></i></h1>
+        <ul class="conveyor"></ul>        
+      </section>
+      <section id="hand">        
+        <h1><i class="fa fa-hand-paper-o" title="Hand"></i></h1>
+        <span></span>
+      </section>
+      <section id="floor">        
+        <h1>Floor</h1>
+        <div id="tiles"></div>
+        <textarea id="editFloor" hidden></textarea>
+      </section>
+      <section id="outbox">
+        <h1><i class="fa fa-hand-o-down" title="Out"></i></h1>
+        <ul class="conveyor"></ul>
+      </section>
+      <section id="code">
+        <h1>Code</h1>
+        <textarea wrap="off"></textarea>
+        <pre></pre>
+        <menu>
+          <button id="stop" title="Stop" disabled><i class="fa fa-stop"></i></button>
+          <button id="back" title="Step Back" disabled><i class="fa fa-step-backward"></i></button>
+          <button id="run" title="Run"><i class="fa fa-play"></i></button>
+          <button id="step" title="Step" disabled><i class="fa fa-step-forward"></i></button>
+        </menu>        
+      </section>
+    </main>
+    <div id="stepSelectContainer" hidden>
+      <label id="stepSelect">Step: <span></span> <input type="range" value="0" /></label>
+    </div>    
+    <footer>
+      <p>
+        © 2015 Nik Coughlin (nrkn.com@gmail.com), Modified by Hirotaka Ohkubo
+      </p>
+    </footer>
+    <script src="./js/hrm-web.js"></script>
+    <script src="./emulator.js"></script>
+  </body>
+</html>

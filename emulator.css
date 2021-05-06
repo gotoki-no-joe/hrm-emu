@@ -1,0 +1,224 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+ 
+body {  
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+	display: flex;
+	flex-direction: row;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+main > section {
+  display: flex;
+  flex-direction: column;    
+  margin-right: 1em;  
+  min-width: 4rem;
+}
+
+#editInbox {
+  display: none;
+}
+
+#editFloor {
+  display: none;
+}
+
+main.editing > section {
+  display: none;
+}
+
+main.editing #editInbox {
+  display: flex;
+  flex-grow: 1;
+}
+
+main.editing #editFloor {
+  display: flex;
+  flex-grow: 1;
+}
+
+main.editing textarea {
+  flex: auto;
+}
+
+.conveyor, #tiles {
+  overflow-y: auto;
+  padding-right: 1.25em;
+}
+
+#tiles {
+  padding-top: 2px;
+}
+
+main h1, main h2, main h3, main h4, main h5, main h6 {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.from {
+  outline: 2px solid #0080ff;
+}
+
+.from-reference {
+  outline: 2px dashed #0080ff;
+}
+
+.to {
+  outline: 2px solid #1d0;
+}
+
+.to-reference {
+  outline: 2px dashed #1d0;
+}
+
+#code {
+  flex: auto;
+}
+
+#code textarea, #code pre {
+  flex: auto;
+}
+
+#code pre {
+  background: #eee;
+  margin-top: 0;
+  overflow-y: scroll;
+  padding: 1em;
+}
+
+#code pre .marker, #code pre .lineNumber {
+  color: #666;
+}
+
+#code pre .arg, #code pre .current span, #code pre .current-target {
+  font-weight: 500;
+}
+
+#code pre .arg svg {  
+  background: #f6f6f6;
+  height: 1.25em;
+  width: auto;
+  vertical-align: middle;
+}
+
+#code pre .current span, #code pre .current-target {
+  color: #06c;  
+}
+
+#code pre .comment {
+  color: #999;
+  font-style: italic;
+  margin: 0;
+}
+
+#code pre .image {
+  background: #f6f6f6;
+  width: 14em;
+  height: auto;
+  margin-top: 1em;
+}
+
+#stepSelect {
+  display: flex;
+  flex-direction: row;     
+}
+
+#stepSelect input {
+  flex: auto;
+}
+
+body > header {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+body > header > h1 {
+  margin-right: 1em;  
+}
+
+#levelName {
+  padding-left: 1em;
+  color: #666;
+}
+
+#floor.hidden {
+  display: none;
+}
+
+menu {
+  padding-left: 0;
+}
+
+.conveyor {
+  list-style: none;
+  padding-left: 2px;
+  padding-top: 2px;
+  margin: 0;
+  font-size: 1rem;
+  min-width: 5rem;
+}
+
+.conveyor .tile {
+  margin-bottom: 0.5em;
+}
+
+#hand .tile {
+  display: inline-block;
+  font-size: 1rem;
+}
+
+.tile {
+  background: #f6f6f6;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 500;
+  width: 3em;
+  height: 3em;
+  line-height: 3em;
+  text-align: center;
+}
+
+.tile.string {
+  background: #999;
+  color: #fff;
+}
+
+.tile.number {
+  background: #ddd;
+  color: #222;
+}
+
+.floorRow {
+  display: flex;
+  flex-direction: row;
+  font-size: 1rem;
+}
+
+.floorTile {
+  background: #eee;
+  display: flex;
+  flex-direction: column;
+  width: 5em;
+  height: 5em;
+  padding: 0 1em;
+}
+
+.floorTile span {
+  display: block;
+  text-align: center;
+  line-height: 1.25;
+  font-size: 0.8rem;
+}
+
+.floorTile .image {
+  background: #fafafa;
+  margin-top: -0.8rem;
+}
